@@ -1,0 +1,27 @@
+# Application servers
+[app]
+192.168.88.202
+#appvm
+
+# Database server
+[db]
+192.168.88.203
+#dbvm
+
+#Group 'multi' with all servers
+[multi:children]
+app
+db
+
+
+
+# Variables that will be applied to all servers
+[multi:vars]
+ansible_ssh_user=root
+ansible_ssh_private_key_file=/root/.ssh/id_rsa
+#ansible_ssh_pass=martin**%%
+
+
+#[app:vars]
+#admin_user=user
+

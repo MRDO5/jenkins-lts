@@ -1,0 +1,23 @@
+---
+     - hosts: db 
+       gather_facts: yes
+
+       roles:
+         - java8
+         - jenkins
+
+
+##   Kariq uni veranajman plugin.yml-i mej vrodi lav chi ashxatum       
+#       tasks:
+#        - name: Install plugin
+#           jenkins_plugin: 
+#              name: Gitlab
+#              state: present
+#              url_username: Admin
+#              url_password: admin
+#              url: http://localhost:8080
+#              with_dependencies: yes
+#           with_items: Docker
+#           tags: plug
+
+...

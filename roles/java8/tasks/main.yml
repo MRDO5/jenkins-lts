@@ -1,0 +1,9 @@
+---
+- name: Install Java8
+  yum: name=java state=latest
+  when: software_version.split('.')[0] == '1:1'
+  tags: java
+
+
+...
+
