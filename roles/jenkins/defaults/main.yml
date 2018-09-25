@@ -20,30 +20,30 @@ jenkins_url_prefix: ""
 jenkins_java_options: "-Djenkins.install.runSetupWizard=false"
 
 jenkins_plugins: 
-    - Ansible plugin
+    - Ansible
     - AnsiColor
-    - Build Pipeline Plugin
+    - Build Pipeline
     - Build Monitor View 
     - Blue Ocean
-    - Build Pipeline Plugin
-    - Copy Artifact Plugin 
+    - Build Pipeline
+    - Copy Artifact 
     - Dashboard for Blue Ocean
-    - disk-usage plugin 
-    - Docker plugin
+    - disk-usage 
+    - Docker
     - docker-build-step
     - dashboard-view
-    - Git client plugin
-    - Git plugin 
-    - GitHub Integration Plugin
+    - Git client
+    - Git 
+    - GitHub Integration
     - Green Balls
     - Job Configuration History
-    - Log Parser Plugin
+    - Log Parser
     - Modern Status
     - Monitoring 
-    - Nested View Plugin 
-    - Simple Theme Plugin
-    - SSH Agent Plugin 
-    - SSH plugin
+    - Nested View 
+    - Simple Theme
+    - SSH Agent 
+    - SSH
     - ThinBackup
     - Docker
     - Kubernetes
