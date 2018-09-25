@@ -23,7 +23,7 @@ jenkins_plugins:
     - Ansible
     - AnsiColor
     - Build Pipeline
-    - Build Monitor 
+    - Build Monitor View 
     - Blue Ocean Plugin
     - Build Pipeline
     - Copy Artifact 
