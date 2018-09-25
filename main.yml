@@ -6,7 +6,6 @@
          - java8
          - jenkins
 
-
 ##   Kariq uni veranajman plugin.yml-i mej vrodi lav chi ashxatum       
 #       tasks:
 #        - name: Install plugin
