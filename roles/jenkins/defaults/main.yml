@@ -23,8 +23,8 @@ jenkins_plugins:
     - Ansible
     - AnsiColor
     - Build Pipeline
-    - Build Monitor View 
-    - Blue Ocean
+    - Build Monitor 
+    - Blue Ocean Plugin
     - Build Pipeline
     - Copy Artifact 
     - Dashboard for Blue Ocean
@@ -42,12 +42,13 @@ jenkins_plugins:
     - Monitoring 
     - Nested View 
     - Simple Theme
-    - SSH Agent 
+    - SSH Agent
     - SSH
     - ThinBackup
     - Docker
     - Kubernetes
     - GitLab
+    - GitHub
     - Gitlab Authentication
 jenkins_plugins_state: present
 jenkins_plugin_updates_expiration: 86400
