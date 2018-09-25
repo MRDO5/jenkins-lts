@@ -25,7 +25,7 @@ jenkins_plugins:
     - Ant-Plugin
     - Build-Pipeline
     - Build-Monitor-plugin 
-    - Blue-Ocean-plugin
+    - Blue-Ocean
     - Build-Pipeline
     - Bitbucket-Cloud-Build-Status-Notifier-Plugin
     - Checkstyle-Plugin
@@ -53,7 +53,7 @@ jenkins_plugins:
     - GitLab
     - GitHub
     - Gitlab-Authentication
-    - Warnings-Plugin
+    - Warnings
 jenkins_plugins_state: present
 jenkins_plugin_updates_expiration: 86400
 jenkins_plugin_timeout: 30
