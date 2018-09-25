@@ -9,7 +9,7 @@
 
 jenkins_package_state: present
 
-# jenkins_version: 2.121.3
+jenkins_version: 2.138.1
 jenkins_connection_delay: 5
 jenkins_connection_retries: 60
 jenkins_home: /var/lib/jenkins
