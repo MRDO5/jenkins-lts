@@ -27,7 +27,7 @@ jenkins_plugins:
     - Build-Monitor-plugin 
     - Blueocean
     - Build-Pipeline-plugin
-    - Bitbucket-build-btatus-notifier-Plugin
+    - Bitbucket-build-status-notifier
     - Checkstyle-Plugin
     - Copyartifact-Plugin 
     - Disk-usage 
