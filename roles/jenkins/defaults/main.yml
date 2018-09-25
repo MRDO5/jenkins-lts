@@ -22,34 +22,34 @@ jenkins_java_options: "-Djenkins.install.runSetupWizard=false"
 jenkins_plugins: 
     - Ansible
     - AnsiColor
-    - Build Pipeline
-    - Build Monitor View 
-    - Blue Ocean Plugin
-    - Build Pipeline
-    - Copy Artifact 
-    - Dashboard for Blue Ocean
+    - Build-Pipeline
+    - Build-Monitor-View 
+    - Blue-Ocean
+    - Build-Pipeline
+    - Copy-Artifact 
+    - Dashboard-for-Blue-Ocean
     - disk-usage 
     - Docker
     - docker-build-step
     - dashboard-view
-    - Git client
+    - Git-client
     - Git 
-    - GitHub Integration
-    - Green Balls
-    - Job Configuration History
-    - Log Parser
-    - Modern Status
+    - GitHub-Integration
+    - Green-Balls
+    - Job-Configuration-History
+    - Log-Parser
+    - Modern-Status
     - Monitoring 
-    - Nested View 
-    - Simple Theme
-    - SSH Agent
+    - Nested-View 
+    - Simple-Theme
+    - SSH-Agent
     - SSH
     - ThinBackup
     - Docker
     - Kubernetes
     - GitLab
     - GitHub
-    - Gitlab Authentication
+    - Gitlab-Authentication
 jenkins_plugins_state: present
 jenkins_plugin_updates_expiration: 86400
 jenkins_plugin_timeout: 30
