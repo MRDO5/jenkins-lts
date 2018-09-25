@@ -22,37 +22,36 @@ jenkins_java_options: "-Djenkins.install.runSetupWizard=false"
 jenkins_plugins: 
     - Ansible
     - AnsiColor
-    - Ant-Plugin
-    - Build-Pipeline
+    - Ant
+    - Build
     - Build-Monitor-plugin 
-    - Blue-Ocean
-    - Build-Pipeline
-    - Bitbucket-Cloud-Build-Status-Notifier-Plugin
+    - Blueocean
+    - Build-Pipeline-plugin
+    - Bitbucket-build-btatus-notifier-Plugin
     - Checkstyle-Plugin
-    - Copy-Artifact-Plugin 
+    - Copyartifact-Plugin 
     - Disk-usage 
-    - Docker-Pipeline-Plugin
     - Docker-Plugin
-    - docker-build-step-plugin
-    - dashboard-view
+    - Docker-Pipeline-Plugin
+    - Docker-build-step-plugin
+    - Dashboard-view
     - Git-client
-    - Git 
-    - GitHub-Integration
-    - Green-Balls
-    - Job-Configuration-History
+    - Git
+    - GitHub
+    - Gitlab-plugin
+    - Gitlab-oauth-plugin
+    - GitHub-integration-plugin
+    - Greenballs
+    - JobConfigHistory-plugin
     - Log-Parser
-    - Modern-Status-plugin
+    - Modernstatus
     - Monitoring 
     - Nested-View 
-    - Simple-Theme
+    - Simple-theme-plugin
     - SSH-Agent
     - SSH
     - ThinBackup
-    - Docker
     - Kubernetes
-    - GitLab
-    - GitHub
-    - Gitlab-Authentication
     - Warnings
 jenkins_plugins_state: present
 jenkins_plugin_updates_expiration: 86400
