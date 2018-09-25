@@ -13,9 +13,17 @@ pipeline {
         stages{
 	    stage('Checkout') {
 		steps {
-                   checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: 'Jenkins-LTS'], [$class: 'WipeWorkspace']], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'fd864bf0-5e33-4cf1-a130-67ac2c22bf17', url: 'https://github.com/MRDO5/jenkins-lts.git']]])
+                   checkout([$class: 'GitSCM', branches: [[name: '*/master']],
+                   doGenerateSubmoduleConfigurations: false,
+                   extensions: [[$class: 'RelativeTargetDirectory',
+                   relativeTargetDir: 'Jenkins-LTS'],
+                   [$class: 'WipeWorkspace']],
+                   submoduleCfg: [],
+                   userRemoteConfigs: [[credentialsId: 'fd864bf0-5e33-4cf1-a130-67ac2c22bf17', url: 'https://github.com/MRDO5/jenkins-lts.git']]])
  			}
 		}
+	    stage ('Deploy') {
+		      parallel {
 			stage('Syntax check') {
 				steps {
 				      ansiblePlaybook become: true, 
@@ -27,7 +35,7 @@ pipeline {
 					} 
 				    }
 				
-			 stage('Check provision for virtual machines') {
+			stage('Check provision for virtual machines') {
 				 steps {
 				   ansiColor('xterm') {
 				      ansiblePlaybook become: true, 
@@ -39,6 +47,9 @@ pipeline {
 				   }
  	                     }
                        }
-               }
+                 }
+           }
       }
+ }
+
 
