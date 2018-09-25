@@ -19,11 +19,36 @@ jenkins_jar_location: /opt/jenkins-cli.jar
 jenkins_url_prefix: ""
 jenkins_java_options: "-Djenkins.install.runSetupWizard=false"
 
-jenkins_plugins: []
-#   - Docker
-#   - Kubernetes
-#   - GitLab
-#   - Gitlab Authentication
+jenkins_plugins: 
+    - Ansible plugin
+    - AnsiColor
+    - Build Pipeline Plugin
+    - Build Monitor View 
+    - Blue Ocean
+    - Build Pipeline Plugin
+    - Copy Artifact Plugin 
+    - Dashboard for Blue Ocean
+    - disk-usage plugin 
+    - Docker plugin
+    - docker-build-step
+    - dashboard-view
+    - Git client plugin
+    - Git plugin 
+    - GitHub Integration Plugin
+    - Green Balls
+    - Job Configuration History
+    - Log Parser Plugin
+    - Modern Status
+    - Monitoring 
+    - Nested View Plugin 
+    - Simple Theme Plugin
+    - SSH Agent Plugin 
+    - SSH plugin
+    - ThinBackup
+    - Docker
+    - Kubernetes
+    - GitLab
+    - Gitlab Authentication
 jenkins_plugins_state: present
 jenkins_plugin_updates_expiration: 86400
 jenkins_plugin_timeout: 30
