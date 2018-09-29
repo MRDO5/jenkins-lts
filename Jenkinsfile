@@ -22,8 +22,8 @@ pipeline {
                    userRemoteConfigs: [[credentialsId: 'fd864bf0-5e33-4cf1-a130-67ac2c22bf17', url: 'https://github.com/MRDO5/jenkins-lts.git']]])
  			}
 		}
-	    stage ('Deploy') {
-		      parallel {
+	    stage('Deploy') {
+		   parallel {
 			stage('Syntax check') {
 				steps {
 				      ansiblePlaybook become: true, 
@@ -45,18 +45,20 @@ pipeline {
 				      inventory: 'Jenkins-LTS/inventory',
 				      playbook: 'Jenkins-LTS/main.yml'
 				   }
- 	                     }
-                       }
-                 }
-	    stage ('Log_parser') {
-               step([$class: 'LogParserPublisher',
+ 	                       }
+                           }
+                      }
+	    stage('Log_parser') {
+              steps {
+                    logparser([$class: 'LogParserPublisher',
                     parsingRulesPath: '/var/lib/jenkins/minimal-rules',
                     useProjectRule: false,
                     failBuildOnError: true,
                     unstableOnWarning: false,
                     Logparsergraphs: true ])
-                 }    
-             } 
+                 }
+             }
          }
     }
+}
 
