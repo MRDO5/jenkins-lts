@@ -48,7 +48,10 @@ pipeline {
  	                       }
                            }
                       }
-	    stage('Log_parser') {
+                  }
+              }
+	stages{ 
+           stage('Log_parser') {
               steps {
                     logparser([$class: 'LogParserPublisher',
                     parsingRulesPath: '/var/lib/jenkins/minimal-rules',
@@ -59,6 +62,5 @@ pipeline {
                  }
              }
          }
-    }
-}
+   }
 
