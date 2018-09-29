@@ -48,8 +48,15 @@ pipeline {
  	                     }
                        }
                  }
-           }
-      }
- }
-
+	    stage ('Log_parser') {
+               step([$class: 'LogParserPublisher',
+                    parsingRulesPath: '/var/lib/jenkins/minimal-rules',
+                    useProjectRule: false,
+                    failBuildOnError: true,
+                    unstableOnWarning: false,
+                    Logparsergraphs: true ])
+                 }    
+             } 
+         }
+    }
 
