@@ -49,16 +49,16 @@ pipeline {
                            }
                       }
                   }
-           stage('Log-parser') {
-              steps {
-                    logparser([$class: 'LogParserPublisher',
-                    parsingRulesPath: '/var/lib/jenkins/minimal-rules',
-                    useProjectRule: false,
-                    failBuildOnError: true,
-                    unstableOnWarning: false,
-                    Logparsergraphs: true ])
-                 }
-             }
+            stage('Log-parser') {
+                 steps {
+                   logparser([$class: 'LogParserPublisher',
+                   parsingRulesPath: '/var/lib/jenkins/minimal-rules',
+                   useProjectRule: false,
+                   failBuildOnError: true,
+                   unstableOnWarning: false,
+                   Logparsergraphs: true ])
+                }
+            }
         }
     }
 
