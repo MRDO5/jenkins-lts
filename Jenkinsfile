@@ -23,7 +23,7 @@ pipeline {
  			}
 		}
 	    stage('Deploy') {
-		   parallel {
+		 parallel {
 			stage('Syntax check') {
 				steps {
 				      ansiblePlaybook become: true, 
@@ -49,7 +49,6 @@ pipeline {
                            }
                       }
                   }
-              }
 	stages{ 
            stage('Log_parser') {
               steps {
@@ -62,5 +61,6 @@ pipeline {
                  }
              }
          }
-   }
+      }
+  }
 
