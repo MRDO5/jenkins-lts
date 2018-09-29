@@ -49,7 +49,6 @@ pipeline {
                            }
                       }
                   }
-	stages{ 
            stage('Log_parser') {
               steps {
                     logparser([$class: 'LogParserPublisher',
@@ -60,7 +59,6 @@ pipeline {
                     Logparsergraphs: true ])
                  }
              }
-         }
-      }
-  }
+        }
+    }
 
