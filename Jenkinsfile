@@ -49,7 +49,7 @@ pipeline {
                   }
             stage('Log-parser') {
                  steps {
-                   step([$class: 'LogParserPublisher',
+                   logparser([$class: 'LogParserPublisher',
 		   failBuildOnError: true,
 		   parsingRulesPath: '/var/lib/jenkins/minimal-rules',
 		   showGraphs: true,
