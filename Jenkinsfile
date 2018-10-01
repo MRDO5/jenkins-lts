@@ -1,12 +1,9 @@
 pipeline {
-    agent {
-	  label 'master'
-        }
+    agent { label 'master'}
 
 	triggers {
            pollSCM('* * * * *')
 	}
-
 	environment {
 		ANSIBLE_CONFIG = "Jenkins-LTS/ansible.cfg"
 		}
@@ -52,14 +49,13 @@ pipeline {
                   }
             stage('Log-parser') {
                  steps {
-                   logparser([$class: 'LogParserPublisher',
-                   parsingRulesPath: '/var/lib/jenkins/minimal-rules',
-                   useProjectRule: false,
-                   failBuildOnError: true,
-                   unstableOnWarning: false,
-                   Logparsergraphs: true ])
-                }
-            }
+                   step([$class: 'LogParserPublisher',
+		   failBuildOnError: true,
+		   parsingRulesPath: '/var/lib/jenkins/minimal-rules',
+		   showGraphs: true,
+		   useProjectRule: false])
+		}
+	    }
         }
-    }
+   }
 
