@@ -1,9 +1,24 @@
 ---
+
 - name: Install Java8
   yum: name=java state=latest
   when: software_version.split('.')[0] == '1:1'
+  when: ansible_os_family == 'RedHat'
   tags: java
 
+#- name: Add oracle-java8 apt repository
+#  apt_repository:
+#    repo: 'ppa:webupd8team/java'
+#    state: present
+#    update_cache: yes
+
+- name: Install packages
+  apt:
+    name: "{{ item }}"
+    state: present
+    #    update_cache: yes
+  with_items: "{{ packages_install }}"
+#  when: ansible_distribution == "Ubuntu"
+  when: ansible_os_family == 'Debian'
 
 ...
-

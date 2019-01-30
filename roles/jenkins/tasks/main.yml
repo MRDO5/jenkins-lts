@@ -1,4 +1,5 @@
 ---
+
 # Variable setup.
 - name: Include OS-Specific variables
   include_vars: "{{ ansible_os_family }}.yml"
@@ -22,8 +23,8 @@
 - include_tasks: setup-RedHat.yml
   when: ansible_os_family == 'RedHat'
 
-#- include_tasks: setup-Debian.yml
-#  when: ansible_os_family == 'Debian'
+- include_tasks: setup-Debian.yml
+  when: ansible_os_family == 'Debian'
 
 # Configure Jenkins init settings.
 - include_tasks: settings.yml
@@ -82,6 +83,5 @@
   when: firewall.changed
 
 #  notify: restart jenkins
-
 
 ...

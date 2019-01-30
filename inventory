@@ -1,18 +1,16 @@
 # Application servers
 [app]
-192.168.88.202
+dev
 #appvm
 
 # Database server
 [db]
-192.168.88.203
 #dbvm
 
 #Group 'multi' with all servers
 [multi:children]
 app
 db
-
 
 
 # Variables that will be applied to all servers
