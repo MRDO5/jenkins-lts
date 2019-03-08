@@ -13,8 +13,8 @@ jenkins_version: 2.150.2
 jenkins_connection_delay: 5
 jenkins_connection_retries: 60
 jenkins_home: /var/lib/jenkins
-jenkins_hostname: localhost
-jenkins_http_port: 8088
+jenkins_hostname: 85.114.128.29
+jenkins_http_port: 8081
 jenkins_jar_location: /opt/jenkins-cli.jar
 jenkins_url_prefix: ""
 jenkins_java_options: "-Djenkins.install.runSetupWizard=false"
@@ -25,9 +25,9 @@ jenkins_plugins:
     - Ant
     - Build
     - Build-Monitor-plugin 
-#    - Blueocean
-#    - Build-Pipeline-plugin
-#    - Bitbucket-build-status-notifier
+    - Blueocean
+    - Build-Pipeline-plugin
+    - Bitbucket-build-status-notifier
     - Checkstyle-Plugin
     - Copyartifact-Plugin 
     - Disk-usage 
@@ -58,7 +58,7 @@ jenkins_plugin_updates_expiration: 86400
 jenkins_plugin_timeout: 30
 jenkins_plugins_install_dependencies: yes
 
-jenkins_admin_username: Admin
+jenkins_admin_username: Martin
 jenkins_admin_password: admin
 jenkins_admin_password_file: ""
 jenkins_admin_token: ""
